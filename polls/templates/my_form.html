@@ -1,0 +1,7 @@
+<form action = "/polls/data" method = "post">
+	{% csrf_token %}
+    <label for="name">Your name: </label>
+    <input id="some-id" type="text" name="name">
+    <input type="submit" value="SUBMIT">
+</form>
+{{first_name}}

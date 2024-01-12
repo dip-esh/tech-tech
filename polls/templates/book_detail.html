@@ -1,0 +1,10 @@
+<h1>Detail</h1>
+   {% if user.is_authenticated %}
+   {{user.is_authenticated}}
+   {{user.is_superuser}}
+     <li>Name: {{ book.name }}</li>
+     <li>ID: {{ book.pk }}</li>
+     <li><a href="{% url 'login' %}">Logout</a></li>
+   {% else %}
+     <li><a href="{% url 'logout' %}">Login</a></li>
+   {% endif %}
